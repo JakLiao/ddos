@@ -93,7 +93,8 @@ def parse_parameters(parameters):
 	num_thread = num_thread_def	
 	try :
 		opts,args = getopt.getopt(parameters,"ht:c:",["help"])
-		url = args[0]
+		if args:
+		    url = args[0]
 		for opt,arg in opts:
 			if opt in ('-h','--help'):
 				usage()
